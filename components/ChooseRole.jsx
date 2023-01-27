@@ -6,29 +6,35 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import BackIcon from '../assets/BackIcon';
 
-function Welcome({navigation}) {
+function ChooseRole({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
+      <TouchableOpacity
+        style={styles.goBack}
+        onPress={() => navigation.goBack()}>
+        <BackIcon />
+      </TouchableOpacity>
       <View>
-        <Text style={styles.heading}>Добро пожаловать</Text>
+        <Text style={styles.heading}>Выбор роли</Text>
         <Text style={styles.paragraph}>
-          Регистрирутесь или зайдите в уже существующий аккаунт
+          Выберите пожалуйста роль регистрации аккаунта
         </Text>
       </View>
       <View style={styles.btnGroup}>
         <View>
           <TouchableOpacity
             style={styles.contained}
-            onPress={() => navigation.navigate('SignIn')}>
-            <Text style={styles.containedText}>Войти</Text>
+            onPress={() => navigation.navigate('Register')}>
+            <Text style={styles.containedText}>Продавец</Text>
           </TouchableOpacity>
         </View>
         <View>
           <TouchableOpacity
             style={styles.outlined}
-            onPress={() => navigation.navigate('ChooseRole')}>
-            <Text style={styles.outlinedText}>Зарегистрироватся</Text>
+            onPress={() => navigation.navigate('Register')}>
+            <Text style={styles.outlinedText}>Покупатель</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -45,6 +51,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'relative',
     gap: 100,
+  },
+  goBack: {
+    position: 'absolute',
+    top: 60,
+    left: 20,
   },
   screen: {
     fontStyle: 'normal',
@@ -74,6 +85,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     letterSpacing: -0.333333,
     color: '#545454',
+    paddingHorizontal: 60,
   },
   contained: {
     color: '#FFFFFF',
@@ -105,4 +117,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Welcome;
+export default ChooseRole;

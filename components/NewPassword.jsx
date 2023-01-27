@@ -9,42 +9,32 @@ import {
 import {TextInput} from 'react-native-gesture-handler';
 import BackIcon from '../assets/BackIcon';
 
-function Welcome({navigation}) {
+function NewPassword({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity
-        style={styles.goBack}
-        onPress={() => navigation.goBack()}>
-        <BackIcon />
-      </TouchableOpacity>
       <View>
-        <Text style={styles.heading}>Вход</Text>
+        <Text style={styles.heading}>Задайте новый пароль</Text>
+      </View>
+      <View style={styles.pad20}>
+        <Text style={styles.text}>
+          Придумайте сложный пароль,содержащий строчные и прописные буквы,а так
+          же цифры и символы
+        </Text>
       </View>
       <View style={styles.inputGroup}>
         <View>
-          <Text style={styles.text}>Эл. почта</Text>
-          <TextInput style={styles.input} />
-          <Text style={styles.text}>Пароль</Text>
+          <Text style={styles.text}>Новый пароль</Text>
           <TextInput style={styles.input} secureTextEntry={true} />
-          <TouchableOpacity
-            onPress={() => navigation.navigate('RecoverPassword')}>
-            <Text
-              style={{
-                textAlign: 'right',
-                paddingHorizontal: 10,
-                textDecorationLine: 'underline',
-              }}>
-              Забыли пароль?
-            </Text>
-          </TouchableOpacity>
+          <Text style={styles.text}>Повторите пароль</Text>
+          <TextInput style={styles.input} secureTextEntry={true} />
         </View>
       </View>
       <View>
         <View>
           <TouchableOpacity
             style={styles.contained}
-            onPress={() => navigation.navigate('SignIn')}>
-            <Text style={styles.containedText}>Вход</Text>
+            onPress={() => navigation.navigate('SuccessAlert')}>
+            <Text style={styles.containedText}>Подтвердить</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -71,7 +61,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     fontStyle: 'normal',
     fontWeight: 400,
-    fontSize: 15,
+    fontSize: 14,
     lineHeight: 18,
     color: '#333333',
   },
@@ -100,6 +90,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     letterSpacing: -0.333333,
     color: '#333333',
+    paddingHorizontal: 80,
   },
   paragraph: {
     marginVertical: 15,
@@ -114,9 +105,11 @@ const styles = StyleSheet.create({
   contained: {
     color: '#FFFFFF',
     backgroundColor: '#3C6954',
-    paddingHorizontal: 130,
-    paddingVertical: 10,
     borderRadius: 8,
+    width: 265,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   outlined: {
     backgroundColor: '#FFF8ED',
@@ -135,6 +128,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#333333',
   },
+  pad20: {
+    paddingHorizontal: 20,
+  },
 });
 
-export default Welcome;
+export default NewPassword;

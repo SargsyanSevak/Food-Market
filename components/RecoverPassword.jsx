@@ -9,7 +9,7 @@ import {
 import {TextInput} from 'react-native-gesture-handler';
 import BackIcon from '../assets/BackIcon';
 
-function Welcome({navigation}) {
+function RecoverPassword({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity
@@ -18,33 +18,26 @@ function Welcome({navigation}) {
         <BackIcon />
       </TouchableOpacity>
       <View>
-        <Text style={styles.heading}>Вход</Text>
+        <Text style={styles.heading}>Восстановление пароля</Text>
+      </View>
+      <View style={styles.pad20}>
+        <Text style={styles.paragraph}>
+          Мы отправим 6-ти значный код на вашу эл. почту для подтверждения
+          личности
+        </Text>
       </View>
       <View style={styles.inputGroup}>
         <View>
           <Text style={styles.text}>Эл. почта</Text>
           <TextInput style={styles.input} />
-          <Text style={styles.text}>Пароль</Text>
-          <TextInput style={styles.input} secureTextEntry={true} />
-          <TouchableOpacity
-            onPress={() => navigation.navigate('RecoverPassword')}>
-            <Text
-              style={{
-                textAlign: 'right',
-                paddingHorizontal: 10,
-                textDecorationLine: 'underline',
-              }}>
-              Забыли пароль?
-            </Text>
-          </TouchableOpacity>
         </View>
       </View>
       <View>
         <View>
           <TouchableOpacity
             style={styles.contained}
-            onPress={() => navigation.navigate('SignIn')}>
-            <Text style={styles.containedText}>Вход</Text>
+            onPress={() => navigation.navigate('ConfirmCode')}>
+            <Text style={styles.containedText}>Отправить код</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -60,7 +53,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
-    gap: 50,
+    gap: 30,
+  },
+  pad20: {
+    paddingHorizontal: 20,
   },
   goBack: {
     position: 'absolute',
@@ -82,16 +78,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
   },
-  screen: {
-    fontStyle: 'normal',
-    fontWeight: 700,
-    fontSize: 35,
-    lineHeight: 47,
-    textAlign: 'center',
-    letterSpacing: -0.333333,
-    color: '#3C6954',
-  },
-
   heading: {
     fontStyle: 'normal',
     fontWeight: 500,
@@ -114,27 +100,16 @@ const styles = StyleSheet.create({
   contained: {
     color: '#FFFFFF',
     backgroundColor: '#3C6954',
-    paddingHorizontal: 130,
-    paddingVertical: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 265,
+    height: 50,
     borderRadius: 8,
-  },
-  outlined: {
-    backgroundColor: '#FFF8ED',
-    paddingHorizontal: 70,
-    paddingVertical: 10,
-    borderRadius: 8,
-    borderColor: '#3C6954',
-    marginTop: 24,
-    borderWidth: 1,
   },
   containedText: {
     color: '#FFFF',
     fontSize: 18,
   },
-  outlinedText: {
-    fontSize: 18,
-    color: '#333333',
-  },
 });
 
-export default Welcome;
+export default RecoverPassword;

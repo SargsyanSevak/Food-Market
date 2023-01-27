@@ -1,9 +1,7 @@
 import React from 'react';
-import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
-
-function ScreenComponent({ navigation }) {
-
+function ScreenComponent({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.screen}>Food Market</Text>
@@ -22,10 +20,10 @@ function ScreenComponent({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#FFF8ED',
     paddingHorizontal: 20,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   screen: {
     fontStyle: 'normal',
@@ -34,8 +32,8 @@ const styles = StyleSheet.create({
     lineHeight: 47,
     textAlign: 'center',
     letterSpacing: -0.333333,
-    color: '#3C6954'
-  }
+    color: '#3C6954',
+  },
 });
 
 export default ScreenComponent;
