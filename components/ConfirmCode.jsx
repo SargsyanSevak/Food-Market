@@ -84,11 +84,12 @@ const styles = StyleSheet.create({
   },
   input: {
     width: 40,
-    height: 40,
-    margin: 12,
+    height: 55,
+    margin: 8,
     borderWidth: 1,
     borderRadius: 8,
     textAlign: 'center',
+    borderColor:'#3C6954'
   },
   heading: {
     fontStyle: 'normal',
@@ -121,6 +122,7 @@ const styles = StyleSheet.create({
   containedText: {
     color: '#FFFF',
     fontSize: 18,
+    fontWeight:700
   },
 });
 

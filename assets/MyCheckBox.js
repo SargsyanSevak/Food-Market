@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import CheckIcon from './CheckIcon';
 
 function MyCheckBox() {
   const [isChecked, setIsChecked] = useState(false);
@@ -15,9 +16,9 @@ function MyCheckBox() {
         onPress={() => setIsChecked(!isChecked)}
         style={styles.checkbox}>
         <View>
-          <Text style={isChecked ? styles.checked : styles.checkboxIcon}>
-            V
-          </Text>
+          <View style={isChecked ? styles.checked : styles.checkboxIcon}>
+            <Text>V</Text>
+          </View>
         </View>
       </TouchableOpacity>
       <Text style={styles.paragraph}>

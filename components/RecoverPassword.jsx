@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     borderRadius: 8,
+    paddingHorizontal:10,
   },
   heading: {
     fontStyle: 'normal',
@@ -109,6 +110,7 @@ const styles = StyleSheet.create({
   containedText: {
     color: '#FFFF',
     fontSize: 18,
+    fontWeight:700
   },
 });
 

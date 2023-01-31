@@ -1,0 +1,59 @@
+{
+    "goods" : [
+      {
+        "id": 1,
+        "title": "Багеты",
+        "price" : "256 руб/шт.",
+        "img":"Багеты.png",
+        "quantity":"30 шт.",
+        "city":"Valencia",
+        "adress":"Pase Ciudadela",
+        "time" : "1 час назад",
+        "delivery" : false
+      },
+      {
+        "id": 2,
+        "title": "Лайм",
+        "price" : "256 руб/шт.",
+        "img":"Багеты.png",
+        "quantity":"30 шт.",
+        "city":"Valencia",
+        "adress":"Pase Ciudadela",
+        "time" : "1 час назад",
+        "delivery" : true
+      },
+      {
+        "id": 3,
+        "title": "Кокосы",
+        "price" : "2200 руб/кг",
+        "img":"Багеты.png",
+        "quantity":"124 кг",
+        "city":"Valencia",
+        "adress":"Pase Ciudadela",
+        "time" : "4 час назад",
+        "delivery" : true
+      },
+      {
+        "id": 4,
+        "title": "Оливки",
+        "price" : "256 руб/шт.",
+        "img":"Багеты.png",
+        "quantity":"30 шт.",
+        "city":"Valencia",
+        "adress":"Pase Ciudadela",
+        "time" : "1 час назад",
+        "delivery" : true
+      },
+      {
+        "id": 5,
+        "title": "Авокадо",
+        "price" : "256 руб/шт.",
+        "img":"Багеты.png",
+        "quantity":"30 шт.",
+        "city":"Valencia",
+        "adress":"Pase Ciudadela",
+        "time" : "1 час назад",
+        "delivery" : true
+      }
+    ]
+  }

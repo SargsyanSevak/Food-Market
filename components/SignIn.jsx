@@ -43,7 +43,9 @@ function Welcome({navigation}) {
         <View>
           <TouchableOpacity
             style={styles.contained}
-            onPress={() => navigation.navigate('SignIn')}>
+            onPress={() => navigation.navigate('BuyerHome',{
+              name:'hindi'
+            })}>
             <Text style={styles.containedText}>Вход</Text>
           </TouchableOpacity>
         </View>
@@ -81,6 +83,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     borderRadius: 8,
+    paddingHorizontal:10,
   },
   screen: {
     fontStyle: 'normal',
@@ -130,10 +133,12 @@ const styles = StyleSheet.create({
   containedText: {
     color: '#FFFF',
     fontSize: 18,
+    fontWeight:700
   },
   outlinedText: {
     fontSize: 18,
     color: '#333333',
+    fontWeight:700
   },
 });
 

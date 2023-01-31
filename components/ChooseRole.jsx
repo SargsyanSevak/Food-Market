@@ -23,7 +23,7 @@ function ChooseRole({navigation}) {
         </Text>
       </View>
       <View style={styles.btnGroup}>
-        <View>
+        <View >
           <TouchableOpacity
             style={styles.contained}
             onPress={() => navigation.navigate('Register')}>
@@ -110,10 +110,12 @@ const styles = StyleSheet.create({
   containedText: {
     color: '#FFFF',
     fontSize: 18,
+    fontWeight:700
   },
   outlinedText: {
     fontSize: 18,
     color: '#333333',
+    fontWeight:700
   },
 });
 

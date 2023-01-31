@@ -1,5 +1,3 @@
-import {StyleSheet} from 'react-native';
-
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ScreenComponent from './components/ScreenComponent';
@@ -13,12 +11,21 @@ import ConfirmCode from './components/ConfirmCode';
 import NewPassword from './components/NewPassword';
 import SuccessAlert from './components/SuccessAlert';
 import ConfirmEmail from './components/ConfirmEmail';
+import SellerHome from './components/Seller/SellerHome';
+import BuyerHome from './components/Buyer/BuyerHome';
+import Context from './components/Context/Context';
+import Card from './components/Product/Card';
+
 
 enableScreens(true);
 const Stack = createNativeStackNavigator();
 
 function App() {
+  
   return (
+    <Context>
+
+    
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="ScreenComponent"
@@ -85,11 +92,30 @@ function App() {
           options={{headerShown: false}}
           component={ConfirmEmail}
         />
+          <Stack.Screen
+          routeName="SellerHome"
+          name="SellerHome"
+          options={{headerShown: false}}
+          component={SellerHome}
+        />
+        <Stack.Screen
+          routeName="BuyerHome"
+          name="BuyerHome"
+          options={{headerShown: false}}
+          component={BuyerHome}
+        />
+        <Stack.Screen
+          routeName="Card"
+          name="Card"
+          options={{headerShown: false}}
+          component={Card}
+        />
       </Stack.Navigator>
     </NavigationContainer>
+    </Context>
   );
 }
 
-const styles = StyleSheet.create({});
+
 
 export default App;

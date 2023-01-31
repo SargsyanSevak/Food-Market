@@ -12,6 +12,11 @@ import BackIcon from '../assets/BackIcon';
 function NewPassword({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
+       <TouchableOpacity
+        style={styles.goBack}
+        onPress={() => navigation.goBack()}>
+        <BackIcon />
+      </TouchableOpacity>
       <View>
         <Text style={styles.heading}>Задайте новый пароль</Text>
       </View>
@@ -71,6 +76,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     borderRadius: 8,
+    paddingHorizontal:10,
   },
   screen: {
     fontStyle: 'normal',
@@ -123,10 +129,12 @@ const styles = StyleSheet.create({
   containedText: {
     color: '#FFFF',
     fontSize: 18,
+    fontWeight:700
   },
   outlinedText: {
     fontSize: 18,
     color: '#333333',
+    fontWeight:700
   },
   pad20: {
     paddingHorizontal: 20,

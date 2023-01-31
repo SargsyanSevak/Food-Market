@@ -11,7 +11,7 @@ import MyCheckBox from '../assets/MyCheckBox';
 import BackIcon from '../assets/BackIcon';
 
 function Register({navigation}) {
-  const [registerAs, setRegisterAs] = useState('');
+  const [registerAs, setRegisterAs] = useState('Физ. лицо');
 
   return (
     <SafeAreaView style={styles.container}>
@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
     color: '#333333',
   },
   input: {
+    paddingHorizontal:10,
     width: 320,
     height: 40,
     margin: 12,
@@ -198,14 +199,17 @@ const styles = StyleSheet.create({
   containedText: {
     color: '#FFFF',
     fontSize: 18,
+    fontWeight:700
   },
   outlinedText: {
     fontSize: 18,
     color: '#333333',
+    fontWeight:600
   },
   outlinedTextWhite: {
     color: '#FFFF',
     fontSize: 18,
+    fontWeight:600
   },
   activeBtn: {
     color: '#FFFF',
